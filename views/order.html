@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Order Here</title>
+    <link rel="stylesheet" href="style_order.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+        function showImgNoodles(){
+            img = document.getElementById("noodles").value;
+            if(img == "stick"){
+                document.getElementById("image1").style.display='inline-block'
+            }
+            else {
+                document.getElementById("image1").style.display='none'
+            }
+            if(img == "wide"){
+                document.getElementById("image2").style.display='inline-block'
+            }
+            else {
+                document.getElementById("image2").style.display='none'
+            }
+            if(img == "glass"){
+                document.getElementById("image3").style.display='inline-block'
+            }
+            else {
+                document.getElementById("image3").style.display='none'
+            }
+            if(img == "narrow"){
+                document.getElementById("image4").style.display='inline-block'
+            }
+            else {
+                document.getElementById("image4").style.display='none'
+            }
+            if(img == "instant"){
+                document.getElementById("image5").style.display='inline-block'
+            }
+            else {
+                document.getElementById("image5").style.display='none'
+            }
+        }
+        function showImgMeat(){
+            img = document.getElementById("meat").value;
+            if(img == "pork"){
+                document.getElementById("image6").style.display='inline-block'
+            }
+            else {
+                document.getElementById("image6").style.display='none'
+            }
+            if(img == "shrimp"){
+                document.getElementById("image7").style.display='inline-block'
+            }
+            else {
+                document.getElementById("image7").style.display='none'
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <td colspan="2">
+                    <div class="image">
+                        <img src="./image/img_index/stick.jpg" id="image1" width="600" height="400">
+                        <img src="./image/img_index/wide.jpg" id="image2" width="600" height="400" hidden="overflow">
+                        <img src="./image/img_index/glass.jpg" id="image3" width="600" height="400" hidden="overflow">
+                        <img src="./image/img_index/narrow.jpg" id="image4" width="600" height="400" hidden="overflow">
+                        <img src="./image/img_index/instant.jpg" id="image5" width="600" height="400" hidden="overflow">
+                    </div>
+                    <div class="select">
+                        <select id="noodles" onchange="showImgNoodles()" width="90%">
+                            <option value="stick" selected class="selected">Choose Noodles</option>
+                            <option value="stick">Rice Stick Noodles</option>
+                            <option value="wide">Wide Rice Noodles</option>
+                            <option value="glass">Glass Noodles</option>
+                            <option value="narrow">Narrow rice noodles</option>
+                            <option value="instant">Instant Noodles</option>
+                        </select>
+                    </div>
+                </td>
+                <td>
+                    <div class="image">
+                        <img src="./image/img_index/pork.jpg" id="image6" width="600px" height="400px">
+                        <img src="./image/img_index/shrimp.jpg" id="image7" width="600px" height="400px" hidden="overflow">
+                    </div>
+                    <div class="select">
+                        <select id="meat" onchange="showImgMeat()" width="90%">
+                            <option value="pork" selected class="selected">Choose Meats</option>
+                            <option value="pork">Pork</option>
+                            <option value="shrimp">Shrimp</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="object4">
+                        <div class="content">
+                            <p>Bean sprout</p>
+                            <input type="checkbox" id="veg1" name="veg[]" value="Bean sprout"/>
+                            <label for="veg1">
+                                <img src="./image/img_index/veg1.jpg" width="600px" height="250px"/>
+                            </label>
+                            <p>Chinese chive</p>
+                            <input type="checkbox" id="veg2" name="veg[]" value="Chinese chive"/>
+                            <label for="veg2">
+                                <img src="./image/img_index/veg2.jpg"/ width="600px" height="250px">
+                            </label>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="object4">
+                        <div class="content2">
+                            <p>Roasted nuts</p>
+                            <input type="checkbox" id="top1" name="top[]" value="Roasted nuts"/>
+                            <label for="top1">
+                                <img src="./image/img_index/top1.jpg"/ width="292.5px" height="220px">
+                            </label>
+                            <p>Dried Salted Prawn</p>
+                            <input type="checkbox" id="top2" name="top[]" value="Dried Salted Prawn"/>
+                            <label for="top2">
+                                <img src="./image/img_index/top2.jpg"/ width="292.5px" height="220px">
+                            </label>
+                        </div>
+                        <div class="content2">
+                            <p>Crackling</p>
+                            <input type="checkbox" id="top3" name="top[]" value="Crackling"/>
+                            <label for="top3">
+                                <img src="./image/img_index/top3.jpg"/ width="292.5px" height="220px">
+                            </label>
+                            <p>Bean curd</p>
+                            <input type="checkbox" id="top4" name="top[]" value="Bean curd"/>
+                            <label for="top4">
+                                <img src="./image/img_index/top4.jpg"/ width="292.5px" height="220px">
+                            </label>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
