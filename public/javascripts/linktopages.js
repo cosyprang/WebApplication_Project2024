@@ -1,7 +1,3 @@
-function linkto_index(){
-    window.location.href = '/index';
-}
-
 function linkto_order(){
     window.location.href = '/order';
 }
@@ -20,4 +16,8 @@ function linkto_topping(){
 
 function linkto_addon(){
     window.location.href = 'order/add-on';
+}
+
+function Backward (){
+    window.history.back();
 }
