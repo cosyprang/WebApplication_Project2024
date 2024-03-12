@@ -9,34 +9,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="javascripts/linktopages.js"></script>
     <script type="text/javascript">
         function showImgNoodles(){
             img = document.getElementById("noodles").value;
-            if(img == "stick"){
+            if(img == "none"){
                 document.getElementById("image1").style.display='inline-block'
             }
             else {
                 document.getElementById("image1").style.display='none'
             }
-            if(img == "wide"){
+            if(img == "Rice Stick Noodles"){
+                document.getElementById("image1").style.display='inline-block'
+            }
+            else {
+                document.getElementById("image1").style.display='none'
+            }
+            if(img == "Wide Rice Noodles"){
                 document.getElementById("image2").style.display='inline-block'
             }
             else {
                 document.getElementById("image2").style.display='none'
             }
-            if(img == "glass"){
+            if(img == "Glass Noodles"){
                 document.getElementById("image3").style.display='inline-block'
             }
             else {
                 document.getElementById("image3").style.display='none'
             }
-            if(img == "narrow"){
+            if(img == "Narrow rice noodles"){
                 document.getElementById("image4").style.display='inline-block'
             }
             else {
                 document.getElementById("image4").style.display='none'
             }
-            if(img == "instant"){
+            if(img == "Instant Noodles"){
                 document.getElementById("image5").style.display='inline-block'
             }
             else {
@@ -45,13 +52,19 @@
         }
         function showImgMeat(){
             img = document.getElementById("meat").value;
-            if(img == "pork"){
+            if(img == "none"){
                 document.getElementById("image6").style.display='inline-block'
             }
             else {
                 document.getElementById("image6").style.display='none'
             }
-            if(img == "shrimp"){
+            if(img == "Pork"){
+                document.getElementById("image6").style.display='inline-block'
+            }
+            else {
+                document.getElementById("image6").style.display='none'
+            }
+            if(img == "Shrimp"){
                 document.getElementById("image7").style.display='inline-block'
             }
             else {
@@ -59,31 +72,28 @@
             }
         }
     </script>
-    
-    <script src="javascripts/linktopages.js"></script>
 </head>
 <body>
-    <button class="Back" onclick="Backward()">Back</button>
-
     <div class="container">
+        <button class="back" onclick="Backward()"><i class='bx bxs-chevron-left' ></i></button>
         <table>
             <tr>
                 <td colspan="2">
                     <div class="image">
-                        <img src="./images/order/stick.jpg" id="image1" width="600" height="400">
-                        <img src="./images/order/wide.jpg" id="image2" width="600" height="400" hidden="overflow">
-                        <img src="./images/order/glass.jpg" id="image3" width="600" height="400" hidden="overflow">
-                        <img src="./images/order/narrow.jpg" id="image4" width="600" height="400" hidden="overflow">
-                        <img src="./images/order/instant.jpg" id="image5" width="600" height="400" hidden="overflow">
+                        <img src="./image/img_index/stick.jpg" id="image1" width="600" height="400">
+                        <img src="./image/img_index/wide.jpg" id="image2" width="600" height="400" hidden="overflow">
+                        <img src="./image/img_index/glass.jpg" id="image3" width="600" height="400" hidden="overflow">
+                        <img src="./image/img_index/narrow.jpg" id="image4" width="600" height="400" hidden="overflow">
+                        <img src="./image/img_index/instant.jpg" id="image5" width="600" height="400" hidden="overflow">
                     </div>
                     <div class="select">
                         <select id="noodles" onchange="showImgNoodles()" width="90%">
-                            <option value="stick" selected class="selected">Choose Noodles</option>
-                            <option value="stick">Rice Stick Noodles</option>
-                            <option value="wide">Wide Rice Noodles</option>
-                            <option value="glass">Glass Noodles</option>
-                            <option value="narrow">Narrow rice noodles</option>
-                            <option value="instant">Instant Noodles</option>
+                            <option value="none" selected class="selected">Choose Noodles</option>
+                            <option value="Rice Stick Noodles">Rice Stick Noodles</option>
+                            <option value="Wide Rice Noodles">Wide Rice Noodles</option>
+                            <option value="Glass Noodles">Glass Noodles</option>
+                            <option value="Narrow rice noodles">Narrow rice noodles</option>
+                            <option value="Instant Noodles">Instant Noodles</option>
                         </select>
                     </div>
                 </td>
@@ -93,11 +103,13 @@
                         <img src="./images/order/shrimp.jpg" id="image7" width="600px" height="400px" hidden="overflow">
                     </div>
                     <div class="select">
-                        <select id="meat" onchange="showImgMeat()" width="90%">
-                            <option value="pork" selected class="selected">Choose Meats</option>
-                            <option value="pork">Pork</option>
-                            <option value="shrimp">Shrimp</option>
-                        </select>
+                        <div class="select">
+                            <select id="meat" onchange="showImgMeat()" width="90%">
+                                <option value="none" selected class="selected">Choose Meats</option>
+                                <option value="Pork">Pork</option>
+                                <option value="Shrimp">Shrimp</option>
+                            </select>
+                        </div>
                     </div>
                 </td>
             </tr>
@@ -113,35 +125,35 @@
                             <p>Chinese chive</p>
                             <input type="checkbox" id="veg2" name="veg[]" value="Chinese chive"/>
                             <label for="veg2">
-                                <img src="./images/order/veg2.jpg"/ width="600px" height="250px">
+                                <img src="./images/order/veg2.jpg" width="600px" height="250px">
                             </label>
                         </div>
                     </div>
                 </td>
                 <td>
-                    <div class="object4">
+                    <div class="object">
                         <div class="content2">
                             <p>Roasted nuts</p>
                             <input type="checkbox" id="top1" name="top[]" value="Roasted nuts"/>
                             <label for="top1">
-                                <img src="./images/order/top1.jpg"/ width="292.5px" height="220px">
+                                <img src="./images/order/top1.jpg" width="292.5px" height="220px">
                             </label>
                             <p>Dried Salted Prawn</p>
                             <input type="checkbox" id="top2" name="top[]" value="Dried Salted Prawn"/>
                             <label for="top2">
-                                <img src="./images/order/top2.jpg"/ width="292.5px" height="220px">
+                                <img src="./images/order/top2.jpg" width="292.5px" height="220px">
                             </label>
                         </div>
                         <div class="content2">
                             <p>Crackling</p>
                             <input type="checkbox" id="top3" name="top[]" value="Crackling"/>
                             <label for="top3">
-                                <img src="./images/order/top3.jpg"/ width="292.5px" height="220px">
+                                <img src="./images/order/top3.jpg" width="292.5px" height="220px">
                             </label>
                             <p>Bean curd</p>
                             <input type="checkbox" id="top4" name="top[]" value="Bean curd"/>
                             <label for="top4">
-                                <img src="./images/order/top4.jpg"/ width="292.5px" height="220px">
+                                <img src="./images/order/top4.jpg" width="292.5px" height="220px">
                             </label>
                         </div>
                     </div>

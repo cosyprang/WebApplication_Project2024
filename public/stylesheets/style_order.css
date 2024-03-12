@@ -13,6 +13,18 @@ body {
     background-repeat: no-repeat;
 }
 
+.back {
+    position: absolute;
+    border: none;
+    background: none;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    font-size: 90px;
+    color: #372417;
+    margin-left: 2%;
+}
+
 table {
     margin-top: 4%;
     margin-left: auto;
@@ -80,7 +92,7 @@ img {
     padding-right: 1.5%;
 }
 
-.object4 {
+.object {
     display: flex;
     align-items: center;
     justify-content: center;
