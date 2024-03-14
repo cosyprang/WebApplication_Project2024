@@ -6,6 +6,7 @@
     <title>Order Here</title>
     <link rel="stylesheet" href="stylesheets/style_order.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -76,8 +77,13 @@
 <body>
     <div class="container">
         <button class="back" onclick="Backward()"><i class='bx bxs-chevron-left' ></i></button>
+        <div class="lang">
+            <i class="fa-solid fa-globe" onclick=""></i>
+            <p><br>EN Lang</p>
+        </div>
         <div class="cart">
-            <i class='bx bxs-cart' onclick="addtoCart()"></i>
+            <i class="fa-solid fa-cart-shopping" onclick="addtoCart()"></i>
+            <p><br>Your Cart</p>
         </div>
         <button class="add-to-cart"><i class='bx bx-plus-circle' ></i>  Add to Cart</button>
         <table>
