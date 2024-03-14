@@ -5,3 +5,7 @@ function linkto_order(){
 function Backward (){
     window.history.back();
 }
+
+function addtoCart (){
+    window.location.href = 'order/showData';
+}
