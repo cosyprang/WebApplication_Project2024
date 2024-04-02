@@ -221,3 +221,7 @@ label::before {
     height: 50px;
     z-index: 1;
 }
+
+input[type="radio"] {
+    display: none;
+}
